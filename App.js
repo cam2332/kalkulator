@@ -88,9 +88,7 @@ export default class App extends React.Component {
     }
   }
   
-  handleTap(value) {
-    let forbiddenOperators = ['%']
-    
+  handleTap(value) {    
     switch(value) {
       case '0':
         if(this.state.calculationText !== '0') {
