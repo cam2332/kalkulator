@@ -242,12 +242,12 @@ export default class App extends React.Component {
          this.setState({
            calculationText: Math.pow(Math.E,this.state.calculationText)
          })
-       } else if (!isNaN(this.state.resultText)) {
-         this.setState({
+        } else if (!isNaN(this.state.resultText)) {
+          this.setState({
            calculationText: Math.pow(Math.E,this.state.resultText),
            resultText: ''
-         })
-       }
+          })
+        }
         break;
       case 'x!':
         if(!isNaN(this.state.calculationText) && this.state.resultText === '') {
@@ -260,6 +260,31 @@ export default class App extends React.Component {
             resultText: ''
           })
        }
+       break;
+      case 'log10':
+        if(!isNaN(this.state.calculationText) && this.state.resultText === '') {
+         this.setState({
+           calculationText: Math.log10(this.state.calculationText)
+         })
+        } else if (!isNaN(this.state.resultText)) {
+          this.setState({
+           calculationText: Math.log10(this.state.resultText),
+           resultText: ''
+          })
+        }
+        break;
+      case 'ln':
+        if(!isNaN(this.state.calculationText) && this.state.resultText === '') {
+         this.setState({
+           calculationText: Math.log(this.state.calculationText)
+         })
+        } else if (!isNaN(this.state.resultText)) {
+          this.setState({
+           calculationText: Math.log(this.state.resultText),
+           resultText: ''
+          })
+        }
+        break;
     }
   }
 
