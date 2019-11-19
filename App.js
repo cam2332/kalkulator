@@ -6,7 +6,7 @@
  * @flow
  */
 
-import React from 'react';
+import  React, { useEffect } from 'react';
 import {
   SafeAreaView,
   StyleSheet,
@@ -26,9 +26,9 @@ import {
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
 
-import Orientation from 'react-native-orientation'
-
-import { evaluate } from 'mathjs'
+import Orientation from 'react-native-orientation';
+import SplashScreen from 'react-native-splash-screen';
+import { evaluate } from 'mathjs';
 
 function Factorial(num) {
   if(num < 15) {
@@ -55,6 +55,7 @@ export default class App extends React.Component {
   }
 
   componentDidMount() {
+    SplashScreen.hide();
     Orientation.addOrientationListener(this._orientationDidChange);
   }
 
