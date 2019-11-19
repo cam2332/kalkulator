@@ -95,7 +95,6 @@ export default class App extends React.Component {
           this.setState({
             calculationText: this.state.calculationText+value,
           })
-          ToastAndroid.show(evaluate(this.state.calculationText+value).toString(), ToastAndroid.SHORT)
           this.setState({
             resultText: this.state.calculationText+value !== evaluate(this.state.calculationText+value).toString() ? evaluate(this.state.calculationText+value).toString() : ''
           })
@@ -115,7 +114,6 @@ export default class App extends React.Component {
           this.setState({
             calculationText: this.state.calculationText+value,
           })
-          ToastAndroid.show(evaluate(this.state.calculationText+value).toString(), ToastAndroid.SHORT)
           this.setState({
             resultText: this.state.calculationText+value !== evaluate(this.state.calculationText+value).toString() ? evaluate(this.state.calculationText+value).toString() : ''
           })
