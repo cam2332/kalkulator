@@ -31,15 +31,11 @@ import SplashScreen from 'react-native-splash-screen';
 import { evaluate } from 'mathjs';
 
 function Factorial(num) {
-  if(num < 15) {
-    let rval = 1;
-    for(let i=2; i <= num; i++) {
-      rval *= i;
-    }
-    return rval;
-  } else {
-    return ''
+  let rval = 1;
+  for(let i=2; i <= num; i++) {
+    rval *= i;
   }
+  return rval;
 }
 
 export default class App extends React.Component {
